@@ -51,12 +51,12 @@ class App extends React.Component {
       ]
     });
   };
-handleDELETE =todo =>{
-  let todoList =this.state.todoList.filter(item =>!item.isDone)
-  this.setState({
-    todoList
-  });
-}
+  handleDELETE = todo => {
+    let todoList = this.state.todoList.filter(item => !item.isDone)
+    this.setState({
+      todoList
+    });
+  }
   handleToggle = todo => {
     let todoList = this.state.todoList.map(item => {
       if (item.id === todo.id) {
@@ -76,15 +76,15 @@ handleDELETE =todo =>{
     });
   };
   handleOnDelete = todo => {
-    let todoList= this.state.todoList.filter(item=>
-      item.id !== todo.id); 
-     this.setState({
-       todoList
-     });
-    }
-    
-    
-  
+    let todoList = this.state.todoList.filter(item =>
+      item.id !== todo.id);
+    this.setState({
+      todoList
+    });
+  }
+
+
+
 
   render() {
     return (
@@ -114,7 +114,7 @@ handleDELETE =todo =>{
         ))}
         <br>
         </br>
-        <button style={{color:"red"}} onClick={this.handleDELETE}>Delete all</button>
+        <button style={{ color: "red" }} onClick={this.handleDELETE}>Delete all</button>
       </div>
     );
   }
@@ -127,5 +127,5 @@ let todoList= this.state.todoList.filter(item=>
  */
 
 
- 
+
 export default App;
